@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .header img {
+                max-width: 150px;
+                margin-bottom: 10px;
+            }
+
+            .header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+        .content {
+            padding: 20px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+            .content p {
+                margin: 0 0 10px;
+            }
+
+        .button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        .footer {
+            background-color: #f1f1f1;
+            color: #666666;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+            .footer a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .social-icons {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+            .social-icons a {
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .social-icons svg {
+                width: 30px;
+                height: 30px;
+                fill: #007bff;
+                transition: fill 0.3s;
+            }
+
+                .social-icons svg:hover {
+                    fill: #0056b3;
+                }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header Section -->
+        <div class="header">
+            <!--<img src="https://media.licdn.com/dms/image/v2/D4D0BAQHQLXuGYK-Low/company-logo_200_200/company-logo_200_200/0/1719256784218/francina_francis_consulting_logo?e=2147483647&v=beta&t=c5e7JieqIiH4QcdJU5vx2Cp7SOqn5wnzeyph2BXlkwA" alt="{{AppName}} Logo" style="max-width: 100px;">-->
+            <h1>Francina & Francis Consulting</h1>
+        </div>
+
+
+        <!-- Content Section -->
+        <div class="content">
+            <p>Hi Candiates,</p>
+            <p>{{UserMessage}}</p>
+            <p>We are dedicated to enhancing manufacturing operations through bespoke ERP solutions, ensuring businesses thrive in today's competitive landscape.</p>
+            <p>We offer premium IT consulting services, delivering strategic guidance and expert solutions to optimize our clients digital initiatives and drive success.</p>
+            <a href="{{AppUrl}}" class="button">Visit Our Website</a>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+                <!-- LinkedIn -->
+                <a href="{{LinkedInUrl}}" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.24.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.72C24 .77 23.21 0 22.23 0zM7.09 20.54H3.56V9h3.53v11.54zM5.33 7.55a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zm15.21 12.99h-3.53v-5.65c0-1.35-.02-3.09-1.88-3.09-1.88 0-2.17 1.47-2.17 2.99v5.75h-3.53V9h3.39v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.38v6.43z" />
+                    </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="{{FacebookUrl}}" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M22.675 0H1.325C.593 0 0 .592 0 1.324v21.351C0 23.408.593 24 1.325 24H12.82v-9.293H9.692v-3.622h3.129V8.41c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.592 1.324-1.325V1.324C24 .592 23.408 0 22.675 0z" />
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; {{Year}} {{AppName}}. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
